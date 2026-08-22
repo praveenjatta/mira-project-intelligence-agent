@@ -1,0 +1,12 @@
+output
+0
+id:msg_063517f03466e4d9006a7d6140bf288198895be184b05530e7
+type:message
+status:completed
+content
+0
+type:output_text
+annotations:[empty array]
+logprobs:[empty array]
+text:Here is the status count for the tasks:\n\n- **Done:** 5\n- **In Progress:** 3\n- **To Do:** 16\n- **Blocked:** 1 \n\nTotal tasks: 25
+role:assistant

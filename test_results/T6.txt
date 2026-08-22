@@ -1,0 +1,12 @@
+output
+0
+id:msg_006e0eb2576a668f006a7d573f2c08819a9fb13ff8987b96d7
+type:message
+status:completed
+content
+0
+type:output_text
+annotations:[empty array]
+logprobs:[empty array]
+text:INSUFFICIENT INFORMATION: I need task data to generate a status report. Please provide [what's missing].
+role:assistant
