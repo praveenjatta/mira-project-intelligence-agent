@@ -1,0 +1,225 @@
+<svg viewBox="0 0 1100 820" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+
+  <rect width="1100" height="820" fill="#F8FAFC"/>
+  <rect width="1100" height="64" fill="#1E40AF"/>
+  <text x="550" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#FFFFFF">Mira — Project Intelligence Assistant</text>
+  <text x="550" y="54" text-anchor="middle" font-size="12" fill="#BFDBFE">Architecture Overview | n8n Multi-Agent Workflow | gpt-4o-mini | Langfuse Observability</text>
+
+  <!-- Section Labels -->
+  <text x="90" y="90" text-anchor="middle" font-size="10" font-weight="bold" fill="#64748B">TRIGGERS</text>
+  <text x="240" y="90" text-anchor="middle" font-size="10" font-weight="bold" fill="#64748B">SET SOURCE</text>
+  <text x="390" y="90" text-anchor="middle" font-size="10" font-weight="bold" fill="#64748B">LOAD DATA</text>
+  <text x="540" y="90" text-anchor="middle" font-size="10" font-weight="bold" fill="#64748B">TRIGGER ROUTE</text>
+  <text x="690" y="90" text-anchor="middle" font-size="10" font-weight="bold" fill="#64748B">MAIN ROUTER</text>
+  <text x="870" y="90" text-anchor="middle" font-size="10" font-weight="bold" fill="#64748B">SPECIALIST AGENTS</text>
+  <text x="1045" y="90" text-anchor="middle" font-size="10" font-weight="bold" fill="#64748B">OUTPUT</text>
+  <line x1="20" y1="96" x2="1080" y2="96" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- MANUAL TRIGGER -->
+  <rect x="30" y="110" width="120" height="48" rx="8" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2"/>
+  <text x="90" y="130" text-anchor="middle" font-size="11" font-weight="bold" fill="#1D4ED8">⚡ Manual</text>
+  <text x="90" y="146" text-anchor="middle" font-size="10" fill="#3B82F6">Trigger</text>
+
+  <!-- SCHEDULE TRIGGER -->
+  <rect x="30" y="176" width="120" height="48" rx="8" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2"/>
+  <text x="90" y="196" text-anchor="middle" font-size="11" font-weight="bold" fill="#1D4ED8">🕐 Schedule</text>
+  <text x="90" y="212" text-anchor="middle" font-size="10" fill="#3B82F6">Trigger (2pm)</text>
+
+  <!-- SET SOURCE MANUAL -->
+  <rect x="170" y="110" width="130" height="48" rx="8" fill="#FFF7ED" stroke="#EA580C" stroke-width="2"/>
+  <text x="235" y="130" text-anchor="middle" font-size="10" font-weight="bold" fill="#C2410C">Set Source</text>
+  <text x="235" y="146" text-anchor="middle" font-size="10" fill="#EA580C">source = manual</text>
+
+  <!-- SET SOURCE SCHEDULE -->
+  <rect x="170" y="176" width="130" height="48" rx="8" fill="#FFF7ED" stroke="#EA580C" stroke-width="2"/>
+  <text x="235" y="196" text-anchor="middle" font-size="10" font-weight="bold" fill="#C2410C">Set Source</text>
+  <text x="235" y="212" text-anchor="middle" font-size="10" fill="#EA580C">source = schedule</text>
+
+  <line x1="150" y1="134" x2="170" y2="134" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#ab)"/>
+  <line x1="150" y1="200" x2="170" y2="200" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#ab)"/>
+
+  <!-- LOAD PROJECT DATA -->
+  <rect x="320" y="120" width="140" height="68" rx="8" fill="#ECFEFF" stroke="#0891B2" stroke-width="2"/>
+  <text x="390" y="143" text-anchor="middle" font-size="12" font-weight="bold" fill="#155E75">📦 Load Project</text>
+  <text x="390" y="159" text-anchor="middle" font-size="12" font-weight="bold" fill="#155E75">Data</text>
+  <text x="390" y="176" text-anchor="middle" font-size="9" fill="#0891B2">projectData + userRequest</text>
+
+  <line x1="300" y1="134" x2="320" y2="148" stroke="#EA580C" stroke-width="1.5" marker-end="url(#ao)"/>
+  <line x1="300" y1="200" x2="320" y2="172" stroke="#EA580C" stroke-width="1.5" marker-end="url(#ao)"/>
+
+  <!-- TRIGGER ROUTER -->
+  <rect x="480" y="120" width="130" height="68" rx="8" fill="#F5F3FF" stroke="#7C3AED" stroke-width="2"/>
+  <text x="545" y="143" text-anchor="middle" font-size="11" font-weight="bold" fill="#5B21B6">🔀 Trigger</text>
+  <text x="545" y="159" text-anchor="middle" font-size="11" font-weight="bold" fill="#5B21B6">Router</text>
+  <text x="545" y="175" text-anchor="middle" font-size="9" fill="#7C3AED">reads $json.source</text>
+
+  <line x1="460" y1="154" x2="480" y2="154" stroke="#0891B2" stroke-width="2" marker-end="url(#ac)"/>
+  <text x="660" y="110" text-anchor="middle" font-size="9" fill="#7C3AED">Manual →</text>
+  <line x1="610" y1="134" x2="648" y2="134" stroke="#7C3AED" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ap)"/>
+
+  <!-- MAIN ROUTER -->
+  <rect x="648" y="114" width="130" height="68" rx="8" fill="#FFF1F2" stroke="#E11D48" stroke-width="2"/>
+  <text x="713" y="137" text-anchor="middle" font-size="11" font-weight="bold" fill="#9F1239">🔀 Main Router</text>
+  <text x="713" y="153" text-anchor="middle" font-size="9" fill="#BE123C">keyword match</text>
+  <text x="713" y="169" text-anchor="middle" font-size="9" fill="#BE123C">on userRequest</text>
+
+  <text x="510" y="268" text-anchor="middle" font-size="9" fill="#7C3AED">Schedule →</text>
+  <line x1="545" y1="188" x2="545" y2="290" stroke="#7C3AED" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ap)"/>
+
+  <!-- 2PM DIGEST -->
+  <rect x="480" y="290" width="150" height="60" rx="8" fill="#F0FDF4" stroke="#16A34A" stroke-width="2"/>
+  <text x="555" y="313" text-anchor="middle" font-size="11" font-weight="bold" fill="#15803D">🤖 2pm Digest</text>
+  <text x="555" y="329" text-anchor="middle" font-size="10" fill="#16A34A">gpt-4o-mini</text>
+  <text x="555" y="343" text-anchor="middle" font-size="9" fill="#16A34A">static daily prompt</text>
+
+  <line x1="630" y1="320" x2="660" y2="320" stroke="#16A34A" stroke-width="1.5" marker-end="url(#ag)"/>
+  <rect x="660" y="300" width="140" height="40" rx="8" fill="#F0FDF4" stroke="#16A34A" stroke-width="1.5"/>
+  <text x="730" y="318" text-anchor="middle" font-size="10" font-weight="bold" fill="#15803D">💬 Slack</text>
+  <text x="730" y="332" text-anchor="middle" font-size="9" fill="#16A34A">#daily-2pm-digest</text>
+
+  <!-- 5 SPECIALIST AGENTS -->
+  <rect x="830" y="110" width="150" height="52" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="1.5"/>
+  <text x="905" y="131" text-anchor="middle" font-size="10" font-weight="bold" fill="#92400E">📋 Status Reporter</text>
+  <text x="905" y="147" text-anchor="middle" font-size="9" fill="#B45309">keyword: status</text>
+
+  <rect x="830" y="178" width="150" height="52" rx="8" fill="#FDF4FF" stroke="#C026D3" stroke-width="1.5"/>
+  <text x="905" y="199" text-anchor="middle" font-size="10" font-weight="bold" fill="#86198F">⚠️ Risk Assessor</text>
+  <text x="905" y="215" text-anchor="middle" font-size="9" fill="#C026D3">keyword: risk</text>
+
+  <rect x="830" y="246" width="150" height="52" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="905" y="267" text-anchor="middle" font-size="10" font-weight="bold" fill="#3730A3">🏁 Milestone Tracker</text>
+  <text x="905" y="283" text-anchor="middle" font-size="9" fill="#4F46E5">keyword: milestone</text>
+
+  <rect x="830" y="314" width="150" height="52" rx="8" fill="#F0FDFA" stroke="#0D9488" stroke-width="1.5"/>
+  <text x="905" y="335" text-anchor="middle" font-size="10" font-weight="bold" fill="#0F766E">🗓️ Planner</text>
+  <text x="905" y="351" text-anchor="middle" font-size="9" fill="#0D9488">keyword: plan</text>
+
+  <rect x="830" y="382" width="150" height="52" rx="8" fill="#FEF2F2" stroke="#DC2626" stroke-width="2"/>
+  <text x="905" y="403" text-anchor="middle" font-size="10" font-weight="bold" fill="#991B1B">📧 Stakeholder Update</text>
+  <text x="905" y="419" text-anchor="middle" font-size="9" fill="#DC2626">keyword: stakeholder</text>
+
+  <!-- Router → Agents arrows (GREEN) -->
+  <line x1="778" y1="136" x2="830" y2="136" stroke="#16A34A" stroke-width="1.5" marker-end="url(#ag)"/>
+  <line x1="778" y1="148" x2="830" y2="204" stroke="#16A34A" stroke-width="1.5" marker-end="url(#ag)"/>
+  <line x1="778" y1="154" x2="830" y2="272" stroke="#16A34A" stroke-width="1.5" marker-end="url(#ag)"/>
+  <line x1="778" y1="160" x2="830" y2="340" stroke="#16A34A" stroke-width="1.5" marker-end="url(#ag)"/>
+  <line x1="778" y1="166" x2="830" y2="408" stroke="#16A34A" stroke-width="1.5" marker-end="url(#ag)"/>
+
+  <!-- Stakeholder → Slack mira-reports -->
+  <line x1="980" y1="408" x2="1020" y2="408" stroke="#DC2626" stroke-width="1.5" marker-end="url(#ar)"/>
+  <rect x="1020" y="388" width="60" height="40" rx="8" fill="#FEF2F2" stroke="#DC2626" stroke-width="1.5"/>
+  <text x="1050" y="406" text-anchor="middle" font-size="8" font-weight="bold" fill="#991B1B">💬 Slack</text>
+  <text x="1050" y="420" text-anchor="middle" font-size="7" fill="#DC2626">#mira-reports</text>
+
+  <!-- MERGE NODE -->
+  <rect x="820" y="460" width="170" height="52" rx="8" fill="#FEF9C3" stroke="#CA8A04" stroke-width="2"/>
+  <text x="905" y="481" text-anchor="middle" font-size="11" font-weight="bold" fill="#854D0E">🔀 Merge - All Agents</text>
+  <text x="905" y="497" text-anchor="middle" font-size="9" fill="#92400E">Collects all agent outputs</text>
+
+  <!-- Agents → Merge arrows -->
+  <line x1="905" y1="434" x2="905" y2="460" stroke="#CA8A04" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#ay)"/>
+  <line x1="905" y1="366" x2="905" y2="460" stroke="#CA8A04" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#ay)"/>
+  <line x1="905" y1="298" x2="905" y2="460" stroke="#CA8A04" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#ay)"/>
+  <line x1="905" y1="230" x2="905" y2="460" stroke="#CA8A04" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#ay)"/>
+  <line x1="905" y1="162" x2="905" y2="460" stroke="#CA8A04" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#ay)"/>
+  <line x1="555" y1="350" x2="820" y2="480" stroke="#CA8A04" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#ay)"/>
+
+  <!-- LANGFUSE HTTP NODE -->
+  <rect x="820" y="535" width="170" height="62" rx="8" fill="#ECFDF5" stroke="#16A34A" stroke-width="2"/>
+  <text x="905" y="557" text-anchor="middle" font-size="11" font-weight="bold" fill="#15803D">📡 Langfuse</text>
+  <text x="905" y="573" text-anchor="middle" font-size="10" font-weight="bold" fill="#15803D">Observability</text>
+  <text x="905" y="589" text-anchor="middle" font-size="8" fill="#16A34A">HTTP Request → Langfuse Cloud</text>
+
+  <!-- Merge → Langfuse arrow -->
+  <line x1="905" y1="512" x2="905" y2="535" stroke="#16A34A" stroke-width="2" marker-end="url(#ag)"/>
+
+  <!-- Langfuse Cloud box -->
+  <rect x="1010" y="545" width="75" height="42" rx="8" fill="#F0FDF4" stroke="#16A34A" stroke-width="1.5"/>
+  <text x="1047" y="563" text-anchor="middle" font-size="9" font-weight="bold" fill="#15803D">📊 Langfuse</text>
+  <text x="1047" y="577" text-anchor="middle" font-size="8" fill="#16A34A">Cloud</text>
+  <line x1="990" y1="566" x2="1010" y2="566" stroke="#16A34A" stroke-width="1.5" marker-end="url(#ag)"/>
+
+  <!-- PROJECT DATA SECTION -->
+  <rect x="20" y="620" width="650" height="88" rx="10" fill="#F0FDFA" stroke="#0D9488" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="345" y="640" text-anchor="middle" font-size="10" font-weight="bold" fill="#0F766E">📦 PROJECT DATA — Loaded once, shared by all agents</text>
+
+  <rect x="35" y="650" width="140" height="48" rx="6" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1"/>
+  <text x="105" y="670" text-anchor="middle" font-size="10" font-weight="bold" fill="#1D4ED8">📄 Description</text>
+  <text x="105" y="686" text-anchor="middle" font-size="9" fill="#3B82F6">ABCDE Ltd. AI Project</text>
+
+  <rect x="190" y="650" width="140" height="48" rx="6" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+  <text x="260" y="670" text-anchor="middle" font-size="10" font-weight="bold" fill="#92400E">📅 Timeline</text>
+  <text x="260" y="686" text-anchor="middle" font-size="9" fill="#B45309">8 phases · 24 weeks</text>
+
+  <rect x="345" y="650" width="140" height="48" rx="6" fill="#FFF1F2" stroke="#E11D48" stroke-width="1"/>
+  <text x="415" y="670" text-anchor="middle" font-size="10" font-weight="bold" fill="#9F1239">⚠️ Risks</text>
+  <text x="415" y="686" text-anchor="middle" font-size="9" fill="#BE123C">10 risks · R01–R10</text>
+
+  <rect x="500" y="650" width="150" height="48" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+  <text x="575" y="670" text-anchor="middle" font-size="10" font-weight="bold" fill="#3730A3">📋 Task Board</text>
+  <text x="575" y="686" text-anchor="middle" font-size="9" fill="#4F46E5">25 tasks · T001–T025</text>
+
+  <!-- PHASE 4 EVAL SECTION -->
+  <rect x="690" y="620" width="390" height="88" rx="10" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="885" y="640" text-anchor="middle" font-size="10" font-weight="bold" fill="#5B21B6">🔬 PHASE 4 — LLM JUDGE (mira-eval) + 📡 PHASE 5 — Langfuse</text>
+
+  <rect x="705" y="650" width="110" height="48" rx="6" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1"/>
+  <text x="760" y="670" text-anchor="middle" font-size="9" font-weight="bold" fill="#5B21B6">12 Test Cases</text>
+  <text x="760" y="686" text-anchor="middle" font-size="8" fill="#7C3AED">DeepEval Judge</text>
+
+  <rect x="830" y="650" width="110" height="48" rx="6" fill="#ECFEFF" stroke="#0891B2" stroke-width="1"/>
+  <text x="885" y="670" text-anchor="middle" font-size="9" font-weight="bold" fill="#155E75">Score: 0.99</text>
+  <text x="885" y="686" text-anchor="middle" font-size="8" fill="#0891B2">12/12 PASS ✅</text>
+
+  <rect x="955" y="650" width="110" height="48" rx="6" fill="#F0FDF4" stroke="#16A34A" stroke-width="1"/>
+  <text x="1010" y="670" text-anchor="middle" font-size="9" font-weight="bold" fill="#15803D">12 Traces</text>
+  <text x="1010" y="686" text-anchor="middle" font-size="8" fill="#16A34A">Langfuse Cloud ✅</text>
+
+  <!-- LEGEND -->
+  <rect x="20" y="724" width="1060" height="68" rx="8" fill="#FFF7ED" stroke="#FDBA74" stroke-width="1.5"/>
+  <text x="540" y="742" text-anchor="middle" font-size="11" font-weight="bold" fill="#9A3412">COLOR KEY — What each node color represents</text>
+
+  <rect x="40" y="750" width="12" height="12" rx="2" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2"/>
+  <text x="58" y="761" font-size="9" fill="#374151">🔵 Trigger Node</text>
+
+  <rect x="155" y="750" width="12" height="12" rx="2" fill="#FFF7ED" stroke="#EA580C" stroke-width="2"/>
+  <text x="173" y="761" font-size="9" fill="#374151">🟠 Set Source</text>
+
+  <rect x="265" y="750" width="12" height="12" rx="2" fill="#ECFEFF" stroke="#0891B2" stroke-width="2"/>
+  <text x="283" y="761" font-size="9" fill="#374151">🩵 Load Data</text>
+
+  <rect x="365" y="750" width="12" height="12" rx="2" fill="#F5F3FF" stroke="#7C3AED" stroke-width="2"/>
+  <text x="383" y="761" font-size="9" fill="#374151">🟣 Trigger Router</text>
+
+  <rect x="490" y="750" width="12" height="12" rx="2" fill="#FFF1F2" stroke="#E11D48" stroke-width="2"/>
+  <text x="508" y="761" font-size="9" fill="#374151">🔴 Main Router</text>
+
+  <rect x="600" y="750" width="12" height="12" rx="2" fill="#FFFBEB" stroke="#D97706" stroke-width="2"/>
+  <text x="618" y="761" font-size="9" fill="#374151">🟡 AI Agent (gpt-4o-mini)</text>
+
+  <rect x="40" y="772" width="12" height="12" rx="2" fill="#FEF9C3" stroke="#CA8A04" stroke-width="2"/>
+  <text x="58" y="783" font-size="9" fill="#374151">🟡 Merge Node</text>
+
+  <rect x="155" y="772" width="12" height="12" rx="2" fill="#ECFDF5" stroke="#16A34A" stroke-width="2"/>
+  <text x="173" y="783" font-size="9" fill="#374151">🟢 Langfuse Observability</text>
+
+  <rect x="355" y="772" width="12" height="12" rx="2" fill="#F0FDF4" stroke="#16A34A" stroke-width="2"/>
+  <text x="373" y="783" font-size="9" fill="#374151">🟢 Slack #daily-2pm-digest</text>
+
+  <rect x="550" y="772" width="12" height="12" rx="2" fill="#FEF2F2" stroke="#DC2626" stroke-width="2"/>
+  <text x="568" y="783" font-size="9" fill="#374151">🔴 Slack #mira-reports</text>
+
+  <rect x="720" y="772" width="12" height="12" rx="2" fill="#F0FDFA" stroke="#0D9488" stroke-width="2"/>
+  <text x="738" y="783" font-size="9" fill="#374151">🩵 Project Data (4 sections)</text>
+
+  <!-- ARROW MARKERS -->
+  <defs>
+    <marker id="ab" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#3B82F6"/></marker>
+    <marker id="ao" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#EA580C"/></marker>
+    <marker id="ac" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#0891B2"/></marker>
+    <marker id="ap" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#7C3AED"/></marker>
+    <marker id="ag" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#16A34A"/></marker>
+    <marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#DC2626"/></marker>
+    <marker id="ay" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#CA8A04"/></marker>
+  </defs>
+</svg>
