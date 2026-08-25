@@ -1,0 +1,29 @@
+output
+0
+id:msg_0ae3480c8935a70f006a8cb647646487d082431895ff18fbbd
+type:message
+status:completed
+content
+0
+type:output_text
+annotations:[empty array]
+logprobs:[empty array]
+text:Based on the task board, the following tasks are blocked or at risk of missing their deadline:
+
+### Blocked Tasks
+1. **Task T024**: Security review of AI infrastructure
+   - **Status**: BLOCKED
+   - **Assignee**: James Wong
+   - **Note**: Waiting for security team availability.
+
+### Tasks at Risk of Missing Their Deadline
+1. **Task T006**: Identify data gaps and quality issues
+   - **Status**: In Progress
+   - **Assignee**: Priya Nair
+   - **Potential Delay**: If data issues are not resolved promptly, subsequent phases may be impacted.
+
+2. **Task T025**: Legal review of data usage
+   - **Status**: In Progress
+   - **Assignee**: Sarah Lin
+   - **Potential Delay**: Legal review may encounter delays, affecting compliance and ethical considerations.
+role:assistant
