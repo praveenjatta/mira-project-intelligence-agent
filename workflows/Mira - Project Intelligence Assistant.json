@@ -613,7 +613,7 @@
             },
             {
               "name": "Authorization",
-              "value": "=Basic cGstbGYtYTExYTA0NTEtZTkwYi00NDJkLWJkZjctNjlkYmNhMDk4OTQxOnNrLWxmLWM0MTVkNmY3LWU0ZTUtNDI4Yi05YTIxLTg2ZjQ4NmJlNjQ1Mw=="
+              "value": "=Basic YOUR_LANGFUSE_KEY_HERE"
             }
           ]
         },
